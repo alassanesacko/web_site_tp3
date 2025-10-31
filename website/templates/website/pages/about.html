@@ -1,0 +1,13 @@
+{% extends 'website/pages/base.html' %}
+
+    {% block 'contenu_principal' %}
+        {% include 'website/sections/about/banner.html' %}
+        {% include 'website/sections/index/about.html' %}
+        {% include 'website/sections/index/service.html' %}
+        {% include 'website/sections/index/paralax.html' %}
+        {% include 'website/sections/about/map.html' %}
+    {% endblock %}
+
+    {% block 'script' %}
+            {% include 'website/partials/script.html'  %}
+    {% endblock %}

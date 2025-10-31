@@ -6,7 +6,7 @@ def index(request):
         'title': 'TP WEB L3 Info',
         'about': get_about()
     }
-    return render(request, 'website/index.html', context)
+    return render(request, 'website/pages/index.html', context)
 
 def about(request):
 
@@ -14,10 +14,10 @@ def about(request):
         'title': 'TP WEB L3 Info',
         'about': get_about()
     }
-    return render(request, 'website/about.html', context)
+    return render(request, 'website/pages/about.html', context)
 
 def contact(request):
-    return render(request, 'website/contact.html')
+    return render(request, 'website/pages/contact.html')
 
 def get_about():
     data = {
@@ -54,3 +54,48 @@ def get_about():
     }
     return data
 
+def services(request):
+    return render(request,'website/pages/our-services.html')
+
+
+def services_detail(request):
+    # Context can be extended later to pass dynamic service data
+    context = {
+        'title': 'Service Details'
+    }
+    return render(request, 'website/pages/services-detail.html', context)
+
+
+def gallery(request):
+    return render(request, 'website/pages/gallery.html')
+
+
+def team(request):
+    return render(request, 'website/pages/team.html')
+
+
+def pricing(request):
+    return render(request, 'website/pages/pricing.html')
+
+
+def blog(request):
+    """Render the blog listing page."""
+    context = {
+        'title': 'Blog'
+    }
+    return render(request, 'website/pages/blog.html', context)
+
+
+def single_blog_right(request):
+    """Render single blog post with right sidebar."""
+    return render(request, 'website/pages/single-blog-post-right-sidebar.html')
+
+
+def single_blog_left(request):
+    """Render single blog post with left sidebar."""
+    return render(request, 'website/pages/single-blog-post-left-sidebar.html')
+
+
+def single_blog_no_sidebar(request):
+    """Render single blog post without sidebar."""
+    return render(request, 'website/pages/single-blog-post-without-sidebar.html')

@@ -1,0 +1,20 @@
+{% extends 'website/pages/base.html' %}
+
+    {% block 'contenu_principal' %}
+        {% include 'website/sections/index/slider.html' %}
+        {% include 'website/sections/index/about.html' with about=about %}
+        {% include 'website/sections/index/service.html' %}
+        {% include 'website/sections/index/feature.html' %}
+        {% include 'website/sections/index/paralax.html' %}
+        {% include 'website/sections/index/portfolio.html' %}
+        {% include 'website/sections/index/team_starts.html' %}
+        {% include 'website/sections/index/pricing.html' %}
+        {% include 'website/sections/index/blog_starts.html' %}
+        {% include 'website/sections/index/testimonial_starts.html' %}
+        {% include 'website/sections/index/clients_starts.html' %}
+        {% include 'website/sections/index/video_starts.html' %}
+    {% endblock %}
+
+   {% block 'script' %}
+            {% include 'website/partials/script.html'  %}
+    {% endblock %}
